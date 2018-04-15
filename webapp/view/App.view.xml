@@ -1,0 +1,40 @@
+<mvc:View
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m"
+        xmlns:mc="sap.suite.ui.microchart"
+        controllerName="sample.app.controller.App"
+        displayBlock="true">
+
+    <Shell>
+        <Page title="Лёшкин суперчат" backgroundDesign="Solid">
+            <content>
+
+                <Dialog id="dialog">
+                    <Label text="Введите данные для того, чтобы присоединиться к чату"
+                           textAlign="Center" width="100%"/>
+                    <Input id="login" placeholder="Никнейм" type = "text"/>
+                    <Button text="Войти" press="authorization" />
+                </Dialog>
+
+                <VBox>
+                <HBox>
+
+                    <Button text="Войти" press="onMessageDialogPress" />
+                </HBox>
+                </VBox>
+
+                <VBox>
+                    <Label text="Ваш ник: " width="20%"/>
+                    <Label id="nick" width="20%"/>
+                    <HBox>
+                        <Input id="message"/>
+                        <Button text="Send" press="onSendMessage" />
+                    </HBox>
+                    <VBox id="messageContent">
+                    </VBox>
+                </VBox>
+
+            </content>
+        </Page>
+    </Shell>
+</mvc:View>
